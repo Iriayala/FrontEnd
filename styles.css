@@ -1,47 +1,46 @@
 .mat-card
 {
   border-radius: 32px;
-  margin: 30px 10px;
+  margin: 10px 10px;
   padding: 20px;
   border-color: gray;
   background-repeat: no-repeat;
   background-size: 100%;
 }
-.mat-card#first-card {
+.mat-card#first-card 
+{
   padding: 0;
   border: 1px solid gray;
 }
 
-.logo{
-
+.logo
+{
   display: flex;
-
 }  
 
-.menu{
-
+.menu
+{
     display: flex;
     list-style: none;
-
 }
 
-.banner{
-
+.banner
+{
   border-radius: 20px;
   height: 300px;
-  margin-top: 0;
+  margin-top: 0px;
   display: flex;
   z-index: 1;
-
-
 }
 
-.profile-background img{
+.profile-background img
+{
   width: 100%;
   border-radius: 32px 32px;
 }
 
-.profile-image{
+.profile-image
+{
   border-radius: 50%;
   width: 153px;
   height: 152px;
@@ -49,7 +48,8 @@
   z-index: 1;
 }
 
-.botones{
+.botones
+{
   display: flex;
   float: right;
   margin-top: 65px;
