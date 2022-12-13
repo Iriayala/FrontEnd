@@ -1,0 +1,16 @@
+{
+    "nombre": "Irina",
+    "Apellido": "Ayala",
+    "Residencia": {
+        "Dirección": "Lugones 2320",
+        "Ciudad": "Buenos Aires",
+        "CP:": "1430",
+    },
+    "historial":[
+        {
+            "Salida": "Nueva York",
+            "Destino": "Mexico",
+        },
+    ]
+    
+}

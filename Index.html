@@ -9,11 +9,11 @@
 	<!-- CSS only - boots 5.0 -->
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<link rel="stylesheet" href="bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
 	<!--JavaScript-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="script.js"></script>
+	<script src="https://kit.fontawesome.com/faa68a82cb.js" crossorigin="anonymous"></script>
 	
 </head>
 
@@ -23,7 +23,7 @@
 			<div class="container-fluid">
 			  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
-			  </button>
+			</button>
 			  <div class="collapse navbar-collapse" id="navbarText">
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 				  <li class="nav-item">
@@ -33,22 +33,27 @@
 					<a class="nav-link" href="#">Information</a>
 				  </li>
 				  <li class="nav-item">
-					<a class="nav-link" href="https://chat.whatsapp.com/IZABSFvfUeDJ9zwJ00mFFI/">Contact</a>
+					<a class="nav-link" href="#">Contact</a>
 				  </li>
 				</ul>
 				<span class="icon-bar">
-					<a href="https://www.argentina.gob.ar/economia/conocimiento/argentina-programa">
-						<img src="img/arg-p.jpg" alt="Argentina Programa" width="90%" height="30px">
-					</a>
-				</span>
-				<span class="icon-bar">
 					<a href="https://www.instagram.com/irinagisellea/">
-						<img src="img/insta.png" alt="Instagram" width="90%" height="30px">		
+						<i class="fa-brands fa-instagram"></i>
 					</a>
 				</span>
 				<span class="icon-bar">
 					<a href="https://www.linkedin.com/in/irina-ayala-0aa95849/">
-						<img src="img/linkedin.png" alt="Linkedin" width="90%" height="30px">
+						<i class="fa-brands fa-linkedin"></i>
+					</a>
+				</span>
+				<span class="icon-bar">
+					<a href="https://www.facebook.com/Lilo.cabj/">
+						<i class="fa-brands fa-facebook"></i>
+					</a>
+				</span>
+				<span class="icon-bar">
+					<a href="https://chat.whatsapp.com/IZABSFvfUeDJ9zwJ00mFFI/">
+						<i class="fa-brands fa-whatsapp"></i>
 					</a>
 				</span>
 			  </div>
@@ -56,46 +61,69 @@
 		</nav>
 	</head>
 
-    <div class= "card mat-card" id="first-card"><!--primer modulo-->
+	<!--primer modulo
+	 1) banner-->
+    <div class= "card mat-card" id="first-card">
         <div id="banner">
-			<img src="img/banner.jpg" width="100%">
+			<img src="img/banner.jpg" width="100%"> 
         </div>
-		<div id="info" style="padding: 16px">
 
+		<!--Imagen de perfil-->
+		<div id="info" style="padding: 16px"> 
 			<div id="info-img">
 				<img class="profile-image" src="img/logo.jpg">
+				<div class="btn button">
+					<a href="#" class="btn-right"><i class="fa-regular fa-pen-to-square"></i></a>
+				</div>
 			</div>
+		
 
-			<div id=" info-data">
+			<div id=" info-data" >
 				<div class="row">
 					<div class="col-md-6">
 						<h1>Irina Giselle Ayala</h1>
 						<div id="info-company">Developer - Full Stack Jr.</div>
 						<div id="info-Contact">
 							<span>Ciudad de Buenos Aires, Argentina</span>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="botones">
+							<div class="botones">
 							<a href="#" class="btn btn-dark" role="button" data-bs-toggle="button">Tengo interés en</a>
 							<a href="#" class="btn btn-secundary active" role="button" data-bs-toggle="button" aria-pressed="true">Sobre mi</a>
 							<a href="#" class="btn btn-secundary disabled" tabindex="-1" aria-disabled="true" role="button" data-bs-toggle="button">Más</a>
+							</div>
 						</div>
+					</div>
+					<div class="col-md-6">
+						<span class="icon-bar">
+							<a href="https://www.argentina.gob.ar/economia/conocimiento/argentina-programa">
+								<img src="img/arg-p.jpg" alt="Argentina Programa" height="30px">
+							</a>
+						</span>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	
 
-	<div class= "card mat-card"> <!--solo está la base-->
+	<div class= "card mat-card">
 			<div class="card-titles">
 				<h2>Acerca de</h2>
+				<div class="btn-edit" onclick="cambiar_parrafo()">
+					<a href="#" class="btn-right">
+						<i class="fa-regular fa-pen-to-square"></i>
+					</a>
+				</div>
 			</div>
-			<div>
-				Técnico en computación.
-			</div>
+		<div>
+			<p id="text-acercade">Técnico en computación. Analista de Mesa de Ayuda y Monitoreo</p>
+		</div>
+		<div>
+			<input type="edit-acercade" type="text" oninput="myfunction2(this.value)" style="display:none">
+		</div>
 	</div>
+
+	<!--seleccionar archivos
+	<input type="file" id="file1" onchange="ShowFile(this)">
+	-->
 
 	<div class= "card mat-card"><!--solo está la base-->
 		<div id="Experiencie">
@@ -104,5 +132,49 @@
 			</div>
 		</div>
 	</div>
+
+	<script>
+		//Este script modifica el valor del id="text-acercade"
+		function cambiar_parrafo() {
+			document.getElementById("edit-acercade").style.display="block";
+			let texto = document.getElementById("text-acercade").innerText;
+			console.logo(texto);
+		};
+
+		function myfunction2(valor) {
+			document.getElementById("text-acercade").innerText=valor;
+		};
+
+		function logMessage(message) {
+			console.log(message + "<br>");
+		};
+
+		//controla si se presiono un "Enter"
+		let textarea=document.getElementById("edit-acercade")
+		textarea.addEventListener('keyup', (e) => {
+			logMessage ('key "${e.key}" released [event:keyup]');
+			if (e,key=="Enter") {
+				document.getElementById("edit-acercade").style.display="none"
+			}
+		});
+
+		//carga el contenido de un archivo de texto y lo muestra en el párrafo
+		function showfile(input) 
+		{
+			let file = input.files[0];
+			alert('file name: ${file.name}');
+			alert('Last Modified: ${file.lastModified}');
+
+			let reader= new FileReader();
+			reader.readAsText(file);
+			reader.onload = function() {
+				console.log(reader.result);
+				document.getElementById("text-acercade").innerText=reader.result;
+			};
+			reader.onerror = function() {
+			console.log(reader.error);
+			};
+		}
+		</script>
 </body>
 </html>
